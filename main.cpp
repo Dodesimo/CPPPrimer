@@ -2,9 +2,6 @@
 
 
 int main() {
-    int x = 42;
-    int* xPointer = &x;
-    int* &referenceToPointer = xPointer;
-    *xPointer = 41;
-    std::cout << *referenceToPointer;
+    const int x = 42;
+    const int* ptr = &x;
 }
