@@ -2,9 +2,9 @@
 
 
 int main() {
-    int i = 100, sum = 0;
-    for (int i = 0; i < 11; ++i)  {
-        sum += i;
-    }
-    std::cout << sum;
+    int x = 42;
+    int* xPointer = &x;
+    int* &referenceToPointer = xPointer;
+    *xPointer = 41;
+    std::cout << *referenceToPointer;
 }
