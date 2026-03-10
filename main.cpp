@@ -1,14 +1,15 @@
+#include <cctype>
 #include <iostream>
 #include <string>
 
 int main() {
     std::string s {"fhjdklasfhdslakSDFHJLKhfdlahfjslkdashdfFDSLJH"};
     int lowerCounter {};
-    for (const auto& c : s) {
+    for (auto& c : s) {
         if (std::islower(c)) {
-            ++lowerCounter;
+            c = std::toupper(c);
         }
     }
-    std::cout << lowerCounter;
+    std::cout << s;
     return 0;
 }
