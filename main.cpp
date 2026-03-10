@@ -2,7 +2,13 @@
 #include <string>
 
 int main() {
-    std::string s {"test"};
-    std::string s2 {"a" + s}; //we can add one string to another literal
-    std::string s3 {"a" + "b"}; //this is illegal we can't add two literals
-}   
+    std::string s {"fhjdklasfhdslakSDFHJLKhfdlahfjslkdashdfFDSLJH"};
+    int lowerCounter {};
+    for (const auto& c : s) {
+        if (std::islower(c)) {
+            ++lowerCounter;
+        }
+    }
+    std::cout << lowerCounter;
+    return 0;
+}
