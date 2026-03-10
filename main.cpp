@@ -1,10 +1,8 @@
 #include <iostream>
-
+#include <string>
 
 int main() {
-    const int x = 42;
-    int y = 42;
-    const int* ptr = &x; // this is a pointer to a const int
-    int* const ptrConst = &y; // this is a const pointer to an int
-    const int* const constPtrConst = &x; //this is a const pointer to a const int
+    std::string s {"test"};
+    std::string s2 {"a" + s}; //we can add one string to another literal
+    std::string s3 {"a" + "b"}; //this is illegal we can't add two literals
 }   
