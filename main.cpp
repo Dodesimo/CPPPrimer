@@ -3,13 +3,9 @@
 #include <string>
 
 int main() {
-    std::string s {"fhjdklasfhdslakSDFHJLKhfdlahfjslkdashdfFDSLJH"};
-    int lowerCounter {};
-    for (auto& c : s) {
-        if (std::islower(c)) {
-            c = std::toupper(c);
-        }
+    std::string s {"abcdefghijklmnopqrstuvwxyz"};
+    for (std::size_t i {}; i < s.size(); ++i) {
+        s[i] = std::toupper(s[i]);
     }
     std::cout << s;
-    return 0;
 }
